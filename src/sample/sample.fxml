@@ -1,0 +1,167 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Label prefHeight="600" prefWidth="780" onMouseClicked="#handleClick" onMousePressed="#handleMousePressed" onMouseDragged="#handleMouseDragged"
+           onMouseReleased="#handleMouseReleased" onMouseMoved="#handleMouseMoved"/>
+    <Button layoutX="780.0" prefHeight="45.0" prefWidth="180.0" text=" Save! " onAction="#handleSaveClick">
+        <font>
+            <Font size="15"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/save.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="45.0" prefHeight="45.0" prefWidth="180.0" text="  Load!" onAction="#handleLoadClick">
+        <font>
+            <Font size="15"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/load.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="90.0" prefHeight="45.0" prefWidth="180.0" text="  Info! " onAction="#handleInfoClick">
+        <font>
+            <Font size="15"/>
+        </font>
+        <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/info.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="135.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleCircleClick">
+        <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/circle.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="205.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleRectangleClick">
+        <graphic>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/rectangle.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="275.0" prefHeight="70.0" prefWidth="90.0" onAction="#handlePolygonClick">
+        <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/polygon.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="870.0" layoutY="135.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleMovementClick">
+        <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/movement.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="870.0" layoutY="205.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleResizeClick">
+        <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/resize.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="870.0" layoutY="275.0" prefHeight="70.0" prefWidth="90.0" onMouseClicked="#handleFillClick">
+        <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/fill.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="780.0" layoutY="345.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleRemoveClick">
+        <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/remove.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="870.0" layoutY="345.0" prefHeight="70.0" prefWidth="90.0" onAction="#handleRemoveAllClick">
+        <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="/Images/removeall.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <TextArea layoutX="780.0" layoutY="415.0" prefHeight="185" prefWidth="180" editable="false"/>
+    <Circle fx:id="colorCircle" layoutX="912.0" layoutY="312.0" radius="10" fill="#ffffff00" onMouseClicked="#handleFillClick"/>
+
+    <Label fx:id="figureLabelL" layoutX="780.0" layoutY="425.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="figureLabelP" layoutX="890.0" layoutY="425.0" prefHeight="20.0" prefWidth="70">
+    <font>
+        <Font size="12"/>
+    </font>
+    </Label>
+    <Label fx:id="fillLabelL" layoutX="780.0" layoutY="445.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="fillLabelP" layoutX="890.0" layoutY="445.0" prefHeight="20.0" prefWidth="70">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="position" layoutX="780.0" layoutY="465.0" prefHeight="20.0" prefWidth="180" alignment="CENTER">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="positionXLabelL" layoutX="780.0" layoutY="485.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="positionXLabelP" layoutX="890.0" layoutY="485.0" prefHeight="20.0" prefWidth="70" >
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="positionYLabelL" layoutX="780.0" layoutY="505.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="positionYLabelP" layoutX="890.0" layoutY="505.0" prefHeight="20.0" prefWidth="70">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="sideXLabelL" layoutX="780.0" layoutY="525.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="sideXLabelP" layoutX="890.0" layoutY="525.0" prefHeight="20.0" prefWidth="70">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="sideYLabelL" layoutX="780.0" layoutY="545.0" prefHeight="20.0" prefWidth="70" alignment="CENTER_RIGHT">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+    <Label fx:id="sideYLabelP" layoutX="890.0" layoutY="545.0" prefHeight="20.0" prefWidth="70">
+        <font>
+            <Font size="12"/>
+        </font>
+    </Label>
+</AnchorPane>
